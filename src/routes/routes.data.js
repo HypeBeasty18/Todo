@@ -11,37 +11,30 @@ import SignUp from "../components/screens/signUp/SignUp";
 export const routes = [
   {
     path: '/',
-    component: Home ,
-    name: 'Main'
+    component: Home 
   },
   {
     path: '/myday',
-    component: MyDay ,
-    name: 'My Day'
+    component: MyDay 
   },
   {
     path: '/important',
-    component: Important,
-    name: 'Important'
+    component: Important
   },
   {
     path: '/planned',
-    component: Planned,
-    name: 'Planned'
+    component: Planned
   },
   {
     path: '/tasks',
-    component: Tasks,
-    name: 'Tasks'
+    component: Tasks
   },
   {
     path: '/auth',
-    component: Auth,
-    name: 'Auth'
+    component: Auth
   },
   {
     path: '/signup',
-    component: SignUp,
-    name: 'SignUp'
+    component: SignUp
   }
 ]
