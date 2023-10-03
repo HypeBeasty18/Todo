@@ -24,8 +24,11 @@ const SignUp = () => {
 
 const  onSubmit = async (data) => {
   try{
-    const response = await axios.post('http://localhost:8000/api/v1/register', data, {
-      headers:{ 'Content-Type': 'application/json' },
+    const response = await axios.post(REGISTER_URL, data, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+      },
       withCredentials: true
     })
     console.log(data);
