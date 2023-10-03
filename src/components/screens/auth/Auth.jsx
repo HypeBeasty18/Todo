@@ -27,7 +27,6 @@ const Auth = () => {
 const  onSubmit = async (data) => {
   try{
     const response = await axios.post(LOGIN_URL, data, {
-      headers:{ 'Content-Type': 'application/json' },
       withCredentials: true
     } )
     console.log(JSON.stringify(response?.data));
