@@ -21,7 +21,6 @@ const Auth = () => {
   })
 
 
-
   const LOGIN_URL = '/login'
 
 
@@ -32,7 +31,10 @@ const  onSubmit = async (data) => {
       withCredentials: true
     } )
     console.log(JSON.stringify(response?.data));
-    const accessToken = response?.data?.accessToken
+    const accessToken = response?.data?.token
+    const refreshToken = response?.data?.refreshToken
+    console.log(accessToken);
+    console.log(refreshToken);
   }catch (err){
     if (!err.response) {
       setErrMsg('No server Response')
@@ -46,11 +48,6 @@ const  onSubmit = async (data) => {
   }
   reset()
 }
-
-
-
-
-
   return (
     <div className='flex justify-center mt-52' >
       <div>

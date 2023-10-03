@@ -30,8 +30,6 @@ const  onSubmit = async (data) => {
     })
     console.log(data);
     console.log(response.data);
-    console.log(response.accessToken);
-
   }catch (err) {
     if (!err?.response) {
       setErrMsg('No server response')
@@ -43,9 +41,6 @@ const  onSubmit = async (data) => {
   }
   reset()
 }
-
-
-
 
 
   return (
