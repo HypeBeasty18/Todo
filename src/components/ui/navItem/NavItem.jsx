@@ -1,8 +1,16 @@
-import React from 'react'
+import { useNavigate } from "react-router-dom"
+
+
+
 
 const NavItem = ({name, path, numbers }) => {
+
+  const navigate = useNavigate()
+
+
+
   return (
-    <div className=''>{name} {numbers}</div>
+    <button className='block'>{name} {numbers} </button>
   )
 }
 

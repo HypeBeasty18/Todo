@@ -20,31 +20,34 @@ const SignUp = () => {
     mode: 'onBlur'
   })
 
+
+
+
   const REGISTER_URL = '/register'
 
-const  onSubmit = async (data) => {
-  try{
-    const response = await axios.post(REGISTER_URL, data, {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json',
-      },
-      withCredentials: true
-    })
-    console.log(data);
-    console.log(response.data);
-  }catch (err) {
-    if (!err?.response) {
-      setErrMsg('No server response')
-    }else if (err.response?.status === 400) {
-      setErrMsg('Username Taken')
-    }else {
-      setErrMsg('Registration failed')
+  const  onSubmit = async (data) => {
+    try{
+      const response = await axios.post(REGISTER_URL, data, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        withCredentials: true
+      })
+      console.log(data);
+      console.log(response.data);
+    }catch (err) {
+      if (!err?.response) {
+        setErrMsg('No server response')
+      }else if (err.response?.status === 400) {
+        setErrMsg('Username Taken')
+      }else {
+        setErrMsg('Registration failed')
+      }
     }
+    reset()
   }
-  reset()
-}
 
+  
 
   return (
     <div className='flex  justify-center mt-52 '>

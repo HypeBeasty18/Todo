@@ -1,11 +1,14 @@
 import './Layout.scss'
+import NavItem from '../ui/navItem/NavItem'
 import NavList from './navList/NavList'
 
 const Layout = ({children}) => {
+
+
   return (
     <div className='containers'>
       <div className='sideBlock'>
-        <NavList/>
+      <NavList/>
       </div>
       <div className='children'>
         {children}
@@ -16,3 +19,4 @@ const Layout = ({children}) => {
 }
 
 export default Layout
+

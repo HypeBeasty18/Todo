@@ -12,7 +12,9 @@ const todoSlice =  createSlice({
       state.todos.push({
         id: nanoid(6),
         title: action.payload.title,
-        isCompleted: false
+        isCompleted: false,
+        important: false,
+        planned:  ''
       })
     },
     removeTodo(state, action) {

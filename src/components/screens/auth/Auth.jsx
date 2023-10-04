@@ -21,12 +21,15 @@ const Auth = () => {
   })
 
 
-  const LOGIN_URL = '/login'
 
+
+
+  const LOGIN_URL = '/login'
 
 const  onSubmit = async (data) => {
   try{
     const response = await axios.post(LOGIN_URL, data, {
+      headers:{ 'Content-Type': 'application/json' },
       withCredentials: true
     } )
     console.log(JSON.stringify(response?.data));
@@ -46,6 +49,11 @@ const  onSubmit = async (data) => {
     }
   }
   reset()
+
+
+
+
+  
 }
   return (
     <div className='flex justify-center mt-52' >
