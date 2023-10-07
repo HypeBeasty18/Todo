@@ -33,7 +33,7 @@ const MyDay = () => {
         </div>
 
         <div className='absolute bottom-0 mb-10 w-[560px]'>
-        <CreateTodoItem/>
+        <CreateTodoItem important={false} planned={''}/>
         </div> 
     </Layout>
   )

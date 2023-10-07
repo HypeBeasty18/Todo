@@ -1,5 +1,4 @@
 import './Layout.scss'
-import NavItem from '../ui/navItem/NavItem'
 import NavList from './navList/NavList'
 
 const Layout = ({children}) => {

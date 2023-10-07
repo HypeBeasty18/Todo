@@ -3,14 +3,14 @@ import {AiOutlinePlus} from 'react-icons/ai'
 import { useDispatch } from 'react-redux'
 import { addTodo } from '../../../store/todoSlice'
 
-const CreateTodoItem = () => {
+const CreateTodoItem = ({important, planned}) => {
 
   const [title, setTitle] = useState('')
 
   const dispatch = useDispatch()
 
   const addTask = () => {
-    dispatch(addTodo({title}))
+    dispatch(addTodo({title, important, planned}))
     setTitle('')
   }
 
@@ -21,6 +21,7 @@ const CreateTodoItem = () => {
       placeholder='Add a task'
       onChange={e => setTitle(e.target.value)}
       value={title}
+      
       onKeyPress={e => e.key === 'Enter' && addTask()}
       ></input>
       {title &&

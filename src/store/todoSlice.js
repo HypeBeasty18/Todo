@@ -13,8 +13,8 @@ const todoSlice =  createSlice({
         id: nanoid(6),
         title: action.payload.title,
         isCompleted: false,
-        important: false,
-        planned:  ''
+        important: action.payload.important,
+        planned:  action.payload.planned
       })
     },
     removeTodo(state, action) {
